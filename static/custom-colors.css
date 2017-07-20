@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Raleway');
+
 html {
     position: relative;
 }
@@ -6,4 +8,14 @@ body {
     background: linear-gradient(to bottom, #E2ECEE, #E9EDEE);
 }
 
+/*h1 {
+    font-family: 'Raleway', sans-serif;
+}
 
+h2 {
+    font-family: 'Raleway', sans-serif;
+}
+
+p {
+    font-family: 'Open Sans Condensed', sans-serif;
+}*/
