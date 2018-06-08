@@ -44,9 +44,8 @@ app.controller("pageCtrl", function($scope){
 </script>
 <div data-ng-app="myPortfolioApp" data-ng-controller="pageCtrl" data-ng-init="page='about'">
 <!-- This is the navigation bar -->
-<nav class="navbar navbar-dark bg-dark">
-<a class="navbar-brand" data-ng-click="aboutPage()">Steff Bisinger</a>
-<div class="collapse navbar-collapse" id="navbarSupportedContent">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" data-ng-click="aboutPage()">Steff Bisinger</a>
 <ul class="navbar-nav mr-auto">
     <li class="nav-item"><a class="nav-link" data-ng-click="aboutPage()">About Me</a></li>
     <li class="nav-item"><a class="nav-link" data-ng-click="employmentPage()">Employment</a></li>
@@ -54,7 +53,6 @@ app.controller("pageCtrl", function($scope){
     <li class="nav-item"><a class="nav-link" data-ng-click="resumePage()">Resume</a></li>
 </ul>
 <span class="navbar-text">IT Security Professional</span>
-</div>
 </nav>
 
 <!-- Landing page content begins here -->
