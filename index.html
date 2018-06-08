@@ -18,33 +18,33 @@
 <script>
 var app = angular.module("myPortfolioApp", []);
 app.controller("pageCtrl", function($scope){
-  $scope.page="about";
+  //$scope.page='about';
   $scope.aboutPage=function(){
-    $scope.page="about";
+    $scope.page='about';
   }
   $scope.employmentPage=function(){
-    $scope.page="employment";
+    $scope.page='employment';
     //Load the JSON of employers and dates
     $http.get("employers.json").then(function(response){
       $scope.employers = response.data.records;
     });
   }
   $scope.projectPage=function(){
-    $scope.page="projects";
+    $scope.page='projects';
     //Load the JSON of projects
-    $http.get("projects.json").then(function(response){
-      $scope.projects = response.data.records;
-    });
+    //$http.get("projects.json").then(function(response){
+    //  $scope.projects = response.data.records;
+    //});
   }
   $scope.resumePage=function(){
-    $scope.page="resume";
+    $scope.page='resume';
   }
 
 });
 </script>
-<div data-ng-app="myPortfolioApp" data-ng-controller="pageCtrl">
+<div data-ng-app="myPortfolioApp" data-ng-controller="pageCtrl" data-ng-init="page='about'">
 <!-- This is the navigation bar -->
-<nav class="navbar navbar-inverse">
+<nav class="navbar navbar-dark bg-dark">
 <div class="collapse navbar-collapse">
 <ul class="nav navbar-nav">
     <li><a id='about' data-ng-click="aboutPage()">About Me</a></li>
