@@ -1,0 +1,22 @@
+{
+  "records":[
+    {
+      "ID": "e0",
+      "Company": "Iowa State University's ISEAGE Lab",
+      "Dates": "November 2013 to May 2018",
+      "About": "As a member of ISEAGE, I collaborated with a team of other
+                student employees to host 5 Cyber Defense Competitions each year
+                for students in high school, community college, and four year universities.",
+      "Skills": "Esxi, VMWare vCenter, Python, Django, Apache, Nginx, Kali Linux"
+    },
+    {
+      "ID": "e1",
+      "Company": "Argonne National Laboratory",
+      "Dates": "May 2017 to January 2018",
+      "About": "I worked as an intern for Argonne's COAR group. A couple of my
+                colleagues and I took over a moving target defense project called
+                DARE which later became the subject of my thesis.",
+      "Skills": "Software testing, research writing, "
+    }
+  ]
+}
