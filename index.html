@@ -23,11 +23,11 @@ app.controller("pageCtrl", function($scope){
     $scope.page='about';
   }
   $scope.employmentPage=function(){
-    $scope.page='employment';
     //Load the JSON of employers and dates
     $http.get('employers.json').success(function(data){
       $scope.employers = data;
     });
+    $scope.page='employment';
   }
   $scope.projectPage=function(){
     $scope.page='projects';
