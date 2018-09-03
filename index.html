@@ -18,23 +18,14 @@
 <script>
 var app = angular.module("myPortfolioApp", []);
 app.controller("pageCtrl", function($scope){
-  //$scope.page='about';
   $scope.aboutPage=function(){
     $scope.page='about';
   }
-  $scope.employmentPage=function($http){
+  $scope.employmentPage=function(){
     $scope.page='employment';
-    //Load the JSON of employers and dates
-    $http.get('employers.json').success(function(data){
-      $scope.employers = data;
-    });
   }
   $scope.projectPage=function(){
     $scope.page='projects';
-    //Load the JSON of projects
-    //$http.get("projects.json").then(function(response){
-    //  $scope.projects = response.data.records;
-    //});
   }
   $scope.resumePage=function(){
     $scope.page='resume';
@@ -88,18 +79,20 @@ My main interests are in penetration testing and secure development practices.
 </div>
 <div class="accordion" id="employerAccordion">
   <div class="card" data-ng-repeat="x in employers">
-    <div class="card-header" id="{{x.employerID}}">
+    <div class="card-header" id="0">
       <h5>
-        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#c{{x.employerID}}" aria-expanded="false" aria-controls="c{{x.employerID}}">
-          {{x.Company}}
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#ce0" aria-expanded="true" aria-controls="ce0">
+          Iowa State University's ISEAGE Lab
         </button>
       </h5>
     </div>
-    <div class="collapse" id="c{{x.employerID}}" aria-labelledby="{{x.employerID}}" data-parent="#employerAccordion">
+    <div class="collapse" id="ce0" aria-labelledby="e0" data-parent="#employerAccordion">
       <div class="card-body">
-        <p><br/>Dates: {{x.Dates}}
-        <br/>About My Experience: {{x.About}}
-        <br/>Top Skills: {{x.Skills}}</p>
+        <p><br/>Dates: November 2013 to May 2018
+        <br/>About My Experience: As a member of ISEAGE, I collaborated with a team of other
+            student employees to host 5 Cyber Defense Competitions each year
+            for students in high school, community college, and four year universities.
+        <br/>Top Skills: Customer service, Esxi, VMWare vCenter, Python, Django, Apache, Nginx, Kali Linux</p>
       </div>
     </div>
   </div>
