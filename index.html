@@ -19,24 +19,24 @@
 var app = angular.module("myPortfolioApp", []);
 app.controller("pageCtrl", function($scope){
   //$scope.page='about';
-  $scope.aboutPage=function(){
+  $scope.aboutPage=function($scope){
     $scope.page='about';
   }
-  $scope.employmentPage=function(){
+  $scope.employmentPage=function($scope, $http){
+    $scope.page='employment';
     //Load the JSON of employers and dates
     $http.get('employers.json').success(function(data){
       $scope.employers = data;
     });
-    $scope.page='employment';
   }
-  $scope.projectPage=function(){
+  $scope.projectPage=function($scope){
     $scope.page='projects';
     //Load the JSON of projects
     //$http.get("projects.json").then(function(response){
     //  $scope.projects = response.data.records;
     //});
   }
-  $scope.resumePage=function(){
+  $scope.resumePage=function($scope){
     $scope.page='resume';
   }
 
