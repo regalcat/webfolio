@@ -25,8 +25,8 @@ app.controller("pageCtrl", function($scope){
   $scope.employmentPage=function(){
     $scope.page="employment";
     //Load the JSON of employers and dates
-    $http.get("employers.json").then(function(response){
-      $scope.employers = response.data.records;
+    $http.get('employers.json').success(function(data){
+      $scope.employers = data;
     });
   }
   $scope.projectPage=function(){
@@ -87,14 +87,14 @@ My main interests are in penetration testing and secure development practices.
 </div>
 <div class="accordion" id="employerAccordion">
   <div class="card" data-ng-repeat="x in employers">
-    <div class="card-header" id="{{x.ID}}">
+    <div class="card-header" id="{{x.employerID}}">
       <h5>
-        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#c{{x.ID}}" aria-expanded="false" aria-controls="c{{x.ID}}">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#c{{x.employerID}}" aria-expanded="false" aria-controls="c{{x.employerID}}">
           {{x.Company}}
         </button>
       </h5>
     </div>
-    <div class="collapse" id="c{{x.ID}}" aria-labelledby="{{x.ID}}" data-parent="#employerAccordion">
+    <div class="collapse" id="c{{x.employerID}}" aria-labelledby="{{x.employerID}}" data-parent="#employerAccordion">
       <div class="card-body">
         <p><br/>Dates: {{x.Dates}}
         <br/>About My Experience: {{x.About}}
