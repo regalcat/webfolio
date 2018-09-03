@@ -16,21 +16,18 @@
 <body>
 <!-- Let the Angular begin -->
 <script>
-function EmploymentController($scope, $http){
-    $http.get('employers.json').success(function(data){
-        $scope.employers = data;
-    });
-}
 var app = angular.module("myPortfolioApp", []);
 app.controller("pageCtrl", function($scope){
   //$scope.page='about';
   $scope.aboutPage=function(){
     $scope.page='about';
   }
-  $scope.employmentPage=function(){
+  $scope.employmentPage=function($http){
     $scope.page='employment';
     //Load the JSON of employers and dates
-    EmploymentController($scope, $http)
+    $http.get('employers.json').success(function(data){
+      $scope.employers = data;
+    });
   }
   $scope.projectPage=function(){
     $scope.page='projects';
@@ -93,13 +90,17 @@ My main interests are in penetration testing and secure development practices.
   <div class="card" data-ng-repeat="x in employers">
     <div class="card-header" id="{{x.employerID}}">
       <h5>
-        {{x.Company}}
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#c{{x.employerID}}" aria-expanded="false" aria-controls="c{{x.employerID}}">
+          {{x.Company}}
+        </button>
       </h5>
     </div>
-    <div class="card-body">
+    <div class="collapse" id="c{{x.employerID}}" aria-labelledby="{{x.employerID}}" data-parent="#employerAccordion">
+      <div class="card-body">
         <p><br/>Dates: {{x.Dates}}
         <br/>About My Experience: {{x.About}}
         <br/>Top Skills: {{x.Skills}}</p>
+      </div>
     </div>
   </div>
 </div>
