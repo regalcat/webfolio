@@ -49,23 +49,43 @@ app.controller("pageCtrl", function($scope){
   <br/>
 <div id="about" data-ng-show="page=='about'">
 <div class="page-header">
-<h1>My Name is Steff Bisinger</h1>
-<hr class="my-4">
-<p>I am a security professional with a Master's in Information Assurance from Iowa State University.
-My main interests are in penetration testing and secure development practices.
-</p>
+<h1>Welcome to My Portfolio!</h1>
+<hr class="my-3">
+<h3>My name is Steff Bisinger, and I am a...</h3>
+<br/>
+<ul class="list-group list-group-flush my-3">
+    <li class="list-group-item">
+        <div class="clearfix">
+            <i class="fas fa-pen-fancy fa-5x float-left mr-4 pr-2" role="img"></i>
+            <h5 class="">security researcher</h5>
+            <p class="text-muted">interested in penetration testing and forensics</p>
+        </div>
+    </li>
+     <li class="list-group-item mt-1">
+        <div class="clearfix">
+            <i class="fas fa-laptop-code fa-5x float-left mr-3" role="img"></i>
+            <h5 class="">programmer</h5>
+            <p class="text-muted">experience with languages like Python and Java</p>
+        </div>
+    </li>
+     <li class="list-group-item mt-1">
+        <div class="clearfix">
+            <i class="fas fa-book fa-5x float-left mr-5" role="img"></i>
+            <h5 class="">life-long learner</h5>
+            <p class="text-muted">constantly learning new skills</p>
+        </div>
+    </li>
+</ul>
 </div>
-
-<div class="card border-primary">
-    <div class="card-header">
-        <h2>Contact Information</h2>
+<div class="card border-secondary mt-5">
+    <div class="card-header text-center">
+        <h3>Contact Information</h3>
     </div>
-    <div class="card-body">
-        <img src="my-photo.jpg" alt="A photo of me" />
+    <div class="card-body text-primary">
         <p>
-        <br>Phone: (319)-350-3130
-        <br>Email: srbising@gmail.com
-        <br/>LinkedIn: <a href="https://www.linkedin.com/in/srbising">Click here</a>
+        <i class="fas fa-phone-square"></i> (319)-350-3130
+        <br><i class="fas fa-envelope"></i> srbising@gmail.com
+        <br/><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/srbising">https://www.linkedin.com/in/srbising</a>
         </p>
     </div>
 </div>
@@ -76,8 +96,8 @@ My main interests are in penetration testing and secure development practices.
 <div class="page-header">
 <h1>I've Worked At...</h1>
 </div>
-<div class="accordion" id="employerAccordion">
-  <div class="card">
+<div class="accordion mt-3" id="employerAccordion">
+  <div class="card border-secondary">
     <div class="card-header" id="0">
       <h5>
         <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#ce0" aria-expanded="true" aria-controls="ce0">
@@ -96,9 +116,10 @@ My main interests are in penetration testing and secure development practices.
             competitors' systems and grades them based on their responses to .
         <br/>Top Skills: Customer service, Esxi, VMWare vCenter, Python, Django, Apache, Nginx, Kali Linux</p>
       </div>
+      <div class="card-footer text-primary">Research Assistant, 4 years 6 months</div>
     </div>
   </div>
-  <div class="card">
+  <div class="card border-secondary">
     <div class="card-header" id="1">
       <h5>
         <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#ce1" aria-expanded="true" aria-controls="ce1">
@@ -113,11 +134,12 @@ My main interests are in penetration testing and secure development practices.
         <br/>About My Experience: I worked as an intern for Argonne's COAR group. A couple of my
             colleagues and I took over a moving target defense project called
             DARE which later became the subject of my thesis.
-        <br/>Top Skills: Software testing, Gitlab development pipelines, research writing, Python</p>
+        <br/>Top Skills: Software testing, Gitlab development pipelines, research writing, Python, LaTeX</p>
       </div>
+      <div class="card-footer text-primary">Research Assistant, 7 months</div>
     </div>
   </div>
-  <div class="card">
+  <div class="card border-secondary">
     <div class="card-header" id="2">
       <h5>
         <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#ce2" aria-expanded="true" aria-controls="ce2">
@@ -132,12 +154,14 @@ My main interests are in penetration testing and secure development practices.
         <br/>About My Experience: I worked on the Network Security team which is responsible
             for the firewalls that keep Rockwell Collins's network functioning. My role as
             an intern was to audit firewall rules for redundancies, configure firewalls
-            before shipping them to other locations, and 
-        <br/>Top Skills: Software testing, Gitlab development pipelines, research writing, Python</p>
+            before shipping them to other locations around the world, and work with
+            internal customers to upgrade their two-factor authentication methods.
+        <br/>Top Skills: Customer service, Checkpoint firewalls, NIST standards, Perl</p>
       </div>
+      <div class="card-footer text-primary">Network Security Intern, 3 months</div>
     </div>
   </div>
-  <div class="card">
+  <div class="card border-secondary">
     <div class="card-header" id="3">
       <h5>
         <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#ce3" aria-expanded="true" aria-controls="ce3">
@@ -149,18 +173,25 @@ My main interests are in penetration testing and secure development practices.
     <div class="collapse" id="ce3" aria-labelledby="e3" data-parent="#employerAccordion">
       <div class="card-body">
         <p><br/>Dates: May 2015 to August 2015
-        <br/>About My Experience: Workiva's security team is in charge of 
-        <br/>Top Skills: Software testing, Gitlab development pipelines, research writing, Python</p>
+        <br/>About My Experience: Workiva's information security team is in charge of verifying
+        the security and compliance of Workiva's software development, both internal and
+        customer facing. During my time on the team, I tested web applications using
+        Burp Suite and helped to develop an internal web tool for phishing assessments.
+        <br/>Top Skills: Python, BurpSuite, Git, Agile development, web application penetration testing</p>
       </div>
+      <div class="card-footer text-primary">Information Security Intern, 3 months</div>
     </div>
   </div>
-
-</div>
+</div><!-- End accordian -->
 </div><!-- End employment -->
 
 <!-- Resume page content -->
-<div id="resume" data-ng-show="page=='employment'">
+<div id="resume" data-ng-show="page=='resume'">
+<div class="page-header">
+<h1>My Curriculum Vitae</h1>
+</div>
 
+<div class="alert alert-primary mt-3" role="alert">You can also download a copy <a href="https://github.com/regalcat/SRB_Resume/blob/master/full_cv/full_cv.pdf" class="alert-link">here</a>. Feel free to share it around.</div>
 </div><!-- End resume content -->
 
 </div><!-- End container -->
